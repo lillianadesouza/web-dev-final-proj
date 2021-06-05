@@ -1,0 +1,80 @@
+<script> const url = 'file:///Users/lilliana.desouza/Documents/eecs-web-dev-396/Final%20project'; </script>
+
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <head>
+        
+    </head> -->
+    <body>
+        <header>
+            <!-- <h1>Final Project [placeholder for title]</h1> -->
+            <img src="images/IMG_0269.PNG" alt="Gather" class="title-image">
+            <link rel="stylesheet" href="css/create.css">
+            <br>
+            <button id="produce" class="btn">My Produce</button>
+        </header>
+       <!-- got help from w3schools on animations! -->
+        <script type="text/javascript">
+            var opacity = 0;
+            var intervalID = 0;
+            window.onload = fadeIn;
+      
+            function fadeIn() {
+                setInterval(show, 200);
+            }
+      
+            function show() {
+                var main = document.getElementById("main");
+                opacity = Number(window.getComputedStyle(main)
+                                 .getPropertyValue("opacity"));
+                if (opacity < 1) {
+                    opacity = opacity + 0.15;
+                    main.style.opacity = opacity
+                } else {
+                    clearInterval(intervalID);
+                }
+            }
+        </script>
+        <main id="main">
+            <div class="centered">
+                <p class="subtitle">Let's record the items you've gathered.</p>
+            </div> 
+
+            <div class="centered">
+                <p>Choose a food to add to your list:</p>
+
+                <form name="add-new" action= '{url}/list.html'>
+                <!-- <label for="foods">Choose a food to add to your list:</label> -->
+                
+                <select name="foods" id="foods">
+                    <option value="broccoli">Broccoli</option>
+                    <option value="artichokes">Artichokes</option>
+                    <option value="carrots">Carrots</option>
+                    <option value="lettuce">Lettuce</option>
+                    <option value="cheese">Cheese</option>
+                    <option value="yogurt">Yogurt</option>
+                    <option value="milk">Milk</option>
+                    <option value="eggs">Eggs</option>
+                    <option value="strawberries">Strawberries</option>
+                    <option value="bananas">Bananas</option>
+                    <option value="kiwis">Kiwis</option>
+                </select>
+                <br><br>
+                <input class="btn-main" type="submit" value="Submit">
+                </form>
+
+            </div>
+             
+            <!-- <div class="centered">
+                <button id="submit" class="btn-main">Add</button>
+            </div>     -->
+            <!-- <section id="section">
+                
+                
+
+            </section> -->
+
+        </main>
+        <!-- <script src="scripts/homepage.js" type="text/javascript"></script> -->
+    </body>
+</html>
