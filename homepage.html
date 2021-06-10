@@ -9,7 +9,7 @@
             <img src="images/IMG_0269.PNG" alt="Gather" class="title-image">
             <link rel="stylesheet" href="css/homepage.css">
             <br>
-            <button id="produce" class="btn">My Produce</button>
+            <button id="produce" class="btn" onclick="window.location.href = 'list.html'" >My Produce</button>
         </header>
        <!-- got help from w3schools on animations! -->
         <script type="text/javascript">
@@ -26,7 +26,7 @@
                 opacity = Number(window.getComputedStyle(main)
                                  .getPropertyValue("opacity"));
                 if (opacity < 1) {
-                    opacity = opacity + 0.15;
+                    opacity = opacity + 0.1;
                     main.style.opacity = opacity
                 } else {
                     clearInterval(intervalID);

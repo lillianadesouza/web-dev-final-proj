@@ -8,8 +8,8 @@
     <body>
         <header>
             <!-- <h1>Final Project [placeholder for title]</h1> -->
-            <img src="images/IMG_0269.PNG" alt="Gather" class="title-image">
-            <link rel="stylesheet" href="css/create.css">
+            <img src="images/IMG_0269.PNG" alt="Gather" class="title-image" onclick="window.location.href = 'homepage.html'">
+            <link rel="stylesheet" href="css/list.css">
             <br>
             <button id="produce" class="btn">My Produce</button>
         </header>
@@ -28,7 +28,7 @@
                 opacity = Number(window.getComputedStyle(main)
                                  .getPropertyValue("opacity"));
                 if (opacity < 1) {
-                    opacity = opacity + 0.15;
+                    opacity = opacity + 0.1;
                     main.style.opacity = opacity
                 } else {
                     clearInterval(intervalID);
@@ -37,12 +37,53 @@
         </script>
         <main id="main">
             <div class="centered">
-                <p class="subtitle">Here are all the items you've gathered.</p>
+                
+                <p class="subtitle">
+                    <img src="images/watermelon.png" alt="Watermelon cartoon" class="side-image">
+                    Here's what you've gathered.
+                    <img src="images/radish.png" alt="Radish cartoon" class="radish-side-image">
+                </p>
+                <br>
             </div> 
 
             <div class="centered">
-                <p>Your list:</p>
-                //add list here!
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Date Purchased</th>
+                        <th>Date Expires</th>
+                    </tr>
+                    <tr onclick="window.location.href = 'blueberries.html'">
+                        <td>Blueberries</td>
+                        <td>6.1.21</td>
+                        <td>6.15.21</td>
+                    </tr>
+                    <tr>
+                        <td>Tomatoes</td>
+                        <td>6.3.21</td>
+                        <td>6.9.21</td>
+                    </tr>
+                    <tr>
+                        <td>Eggs</td>
+                        <td>6.2.21</td>
+                        <td>6.22.21</td>
+                    </tr>
+                    <tr>
+                        <td>Milk</td>
+                        <td>6.2.21</td>
+                        <td>6.30.21</td>
+                    </tr>
+                    <tr>
+                        <td>Onions</td>
+                        <td>5.31.21</td>
+                        <td>6.25.21</td>
+                    </tr>
+                    <tr>
+                        <td>Carrots</td>
+                        <td>6.1.21</td>
+                        <td>7.8.21</td>
+                    </tr>
+                </table>
                 
 
             </div>
